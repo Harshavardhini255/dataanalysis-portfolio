@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <radialGradient id="f" cx="0.7" cy="0.2" r="1.1">
+      <stop offset="0" stop-color="#232019"/>
+      <stop offset="0.5" stop-color="#12120f"/>
+      <stop offset="1" stop-color="#0b0b0c"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#f)"/>
+  <g stroke="#f2f2ef" stroke-opacity="0.12">
+    <path d="M0 300h1200"/>
+    <path d="M0 900h1200"/>
+    <path d="M200 0v1500"/>
+    <path d="M1000 0v1500"/>
+  </g>
+  <g fill="#f2f2ef">
+    <rect x="340" y="260" width="220" height="60" fill-opacity="0.9"/>
+    <rect x="600" y="260" width="160" height="60" fill-opacity="0.5"/>
+    <rect x="460" y="360" width="240" height="60" fill-opacity="0.7"/>
+    <rect x="420" y="520" width="180" height="220" fill-opacity="0.28"/>
+    <rect x="740" y="520" width="180" height="330" fill-opacity="0.28"/>
+    <rect x="580" y="520" width="130" height="170" fill-opacity="0.55"/>
+  </g>
+  <rect x="420" y="910" width="500" height="70" fill="#e8a13c" fill-opacity="0.9"/>
+  <path d="M0 1180c220-140 480-140 700 0s380 0 500-60v380H0Z" fill="#141416"/>
+  <path d="M300 1260c180 90 320 60 480-20s260-30 420 40" stroke="#f2f2ef" stroke-opacity="0.35"/>
+</svg>

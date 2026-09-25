@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="c" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#1a1a1e"/>
+      <stop offset="1" stop-color="#0b0b0c"/>
+    </linearGradient>
+    <radialGradient id="cg" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#e8a13c" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#e8a13c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#c)"/>
+  <rect width="1440" height="900" fill="url(#cg)"/>
+  <g stroke="#f2f2ef" stroke-opacity="0.13">
+    <path d="M0 150h1440"/>
+    <path d="M0 450h1440"/>
+    <path d="M0 750h1440"/>
+    <path d="M120 0v900"/>
+    <path d="M540 0v900"/>
+    <path d="M960 0v900"/>
+    <path d="M1320 0v900"/>
+  </g>
+  <g>
+    <rect x="180" y="520" width="110" height="200" fill="#f2f2ef" fill-opacity="0.85"/>
+    <rect x="330" y="380" width="110" height="340" fill="#f2f2ef" fill-opacity="0.55"/>
+    <rect x="480" y="560" width="110" height="160" fill="#e8a13c"/>
+    <rect x="630" y="300" width="110" height="420" fill="#f2f2ef" fill-opacity="0.4"/>
+    <rect x="780" y="480" width="110" height="240" fill="#f2f2ef" fill-opacity="0.7"/>
+    <rect x="930" y="420" width="110" height="300" fill="#f2f2ef" fill-opacity="0.3"/>
+  </g>
+  <path d="M180 300h810" stroke="#e8a13c" stroke-opacity="0.9" stroke-width="2"/>
+  <circle cx="240" cy="180" r="14" fill="none" stroke="#f2f2ef" stroke-opacity="0.6"/>
+  <circle cx="240" cy="180" r="4" fill="#e8a13c"/>
+  <path d="M1000 150h260v120H1000Z" stroke="#f2f2ef" stroke-opacity="0.35"/>
+  <text x="1130" y="215" text-anchor="middle" fill="#f2f2ef" fill-opacity="0.7" font-family="monospace" font-size="20">KPI</text>
+</svg>
