@@ -2,11 +2,12 @@ import { meta } from '../data/content'
 import { Kicker, Magnetic } from '../components/primitives'
 import { RevealWords } from '../components/reveal'
 import { useApp } from '../lib/useApp'
+import { ArrowUp, ArrowUpRight, Mail } from 'lucide-react'
 
 const ROWS = [
   { label: 'Email', value: meta.email, href: `mailto:${meta.email}` },
   { label: 'Phone', value: meta.phone, href: `tel:${meta.phoneRaw}` },
-  { label: 'GitHub', value: 'github.com/Harshavardhini255', href: meta.github },
+  { label: 'GitHub', value: 'github.com/yourname', href: meta.github },
   { label: 'Based in', value: meta.location, href: null },
 ]
 
@@ -32,12 +33,11 @@ export default function Contact() {
             href={`mailto:${meta.email}`}
             data-cursor="Say hi"
             data-cursor-scale="2"
-            aria-label="Email Harsha"
+            aria-label="Email"
             className="group flex h-40 w-40 items-center justify-center rounded-full border border-line transition-colors duration-500 hover:border-accent sm:h-52 sm:w-52"
           >
             <span className="relative flex h-24 w-24 items-center justify-center rounded-full bg-accent text-ink transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110">
-              <span className="font-mono text-[9px] uppercase tracking-[0.2em]">Email me</span>
-              <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-0" aria-hidden="true" />
+              <Mail className="h-6 w-6 transition-transform duration-500 group-hover:-translate-y-1" />
             </span>
           </a>
         </Magnetic>
@@ -59,7 +59,7 @@ export default function Contact() {
                   {r.value}
                 </span>
                 <span className="hidden justify-self-end text-xl transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-2 sm:block" aria-hidden="true">
-                  ↗
+                  <ArrowUpRight className="h-6 w-6" />
                 </span>
               </a>
             ) : (
@@ -88,7 +88,9 @@ export default function Contact() {
           aria-label="Back to top"
         >
           Back to top
-          <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+          <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1">
+            <ArrowUp className="h-3 w-3" />
+          </span>
         </button>
       </footer>
     </section>

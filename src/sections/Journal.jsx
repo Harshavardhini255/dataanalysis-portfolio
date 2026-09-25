@@ -1,15 +1,12 @@
 import { education, certifications, activities, currentFocus } from '../data/content'
 import { Kicker } from '../components/primitives'
-import { RevealGroup, RevealWords, MaskParagraph } from '../components/reveal'
+import { RevealGroup, MaskParagraph } from '../components/reveal'
+import SectionHeader from '../components/SectionHeader'
 
 export default function Journal() {
   return (
     <section id="journal" className="px-6 py-28 sm:px-10 sm:py-40">
-      <Kicker>05 — Foundations</Kicker>
-      <RevealWords
-        text="Education & Proof"
-        className="mt-4 font-display text-5xl font-bold uppercase tracking-tight sm:text-7xl"
-      />
+      <SectionHeader index="05" label="Foundations" title="Education" />
 
       <div className="mt-16 grid gap-12 lg:grid-cols-2">
         <div>

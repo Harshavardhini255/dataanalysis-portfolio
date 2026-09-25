@@ -6,11 +6,10 @@ import { meta } from '../data/content'
 
 const LINKS = [
   { index: '01', label: 'Index', target: '#top' },
-  { index: '02', label: 'Works', target: '#works' },
-  { index: '03', label: 'About', target: '#about' },
-  { index: '04', label: 'Skills', target: '#skills' },
-  { index: '05', label: 'Experience', target: '#experience' },
-  { index: '06', label: 'Contact', target: '#contact' },
+  { index: '02', label: 'About', target: '#about' },
+  { index: '03', label: 'Work', target: '#works' },
+  { index: '04', label: 'Experience', target: '#experience' },
+  { index: '05', label: 'Contact', target: '#contact' },
 ]
 
 export default function Menu() {

@@ -1,15 +1,12 @@
 import { skillGroups, interests } from '../data/content'
-import { Kicker, Marquee } from '../components/primitives'
-import { RevealWords, RevealGroup } from '../components/reveal'
+import { Marquee } from '../components/primitives'
+import { RevealGroup } from '../components/reveal'
+import SectionHeader from '../components/SectionHeader'
 
 export default function Skills() {
   return (
     <section id="skills" className="px-6 py-28 sm:px-10 sm:py-40">
-      <Kicker>03 — Toolbox</Kicker>
-      <RevealWords
-        text="Skills & Stack"
-        className="mt-4 font-display text-5xl font-bold uppercase tracking-tight sm:text-7xl"
-      />
+      <SectionHeader index="03" label="Toolbox" title="Skills & Stack" />
 
       <div className="mt-16 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((group) => (

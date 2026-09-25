@@ -1,15 +1,15 @@
-import portrait from '../assets/portrait.jpg'
+import heroArt from '../assets/hero.svg'
 import about2 from '../assets/about2.svg'
 import { about } from '../data/content'
 import { Kicker, RotatingBadge } from '../components/primitives'
 import { MaskParagraph } from '../components/reveal'
-import { ParallaxImage } from '../components/primitives'
+import ImageReveal from '../components/ImageReveal'
 
 const stats = [
-  { value: '03', label: 'Data internships' },
-  { value: '15+', label: 'Analytical reports' },
-  { value: '50K+', label: 'Records analysed' },
-  { value: '25%', label: 'Data accuracy lift' },
+  { value: '00', label: 'Statistic one' },
+  { value: '00', label: 'Statistic two' },
+  { value: '00', label: 'Statistic three' },
+  { value: '00', label: 'Statistic four' },
 ]
 
 export default function About() {
@@ -20,9 +20,9 @@ export default function About() {
           <div className="sticky top-28 space-y-6">
             <Kicker>01 — About</Kicker>
             <p className="max-w-xs font-mono text-[11px] uppercase leading-relaxed tracking-[0.2em] text-mist">
-              Junior data analyst turning raw data into decisions.
+              Replace this line with a short version of your introduction.
             </p>
-            <RotatingBadge text="Data Analyst • Python • SQL • Power BI • " className="h-32 w-32 text-mist" />
+            <RotatingBadge text="Your craft • Your focus • Your tools • " className="h-32 w-32 text-mist" />
           </div>
         </div>
 
@@ -42,20 +42,19 @@ export default function About() {
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-10 md:flex-row">
-            <ParallaxImage
-              src={portrait}
-              alt="Portrait of Harsha Vardhini"
+            <ImageReveal
+              src={heroArt}
+              alt="Visual placeholder"
               className="aspect-[4/5] w-full md:w-[46%]"
             />
             <RotatingBadge
-              text="Explain • Explore • Visualise • Decide • "
+              text="Your • Text • Your • Text • "
               className="order-first h-36 w-36 shrink-0 text-mist md:order-none"
             />
-            <ParallaxImage
+            <ImageReveal
               src={about2}
-              alt="Abstract mark artwork"
+              alt="Visual placeholder"
               className="aspect-[4/5] w-full md:w-[46%]"
-              speed={-12}
             />
           </div>
         </div>

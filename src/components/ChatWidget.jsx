@@ -1,23 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-import { meta, skillGroups, projects, experience, education, certifications } from '../data/content'
 import { Magnetic } from './primitives'
 import { useApp } from '../lib/useApp'
 
 const API_KEY = import.meta.env.VITE_OPENAI_API_KEY || ''
 const MODEL = import.meta.env.VITE_OPENAI_MODEL || 'gpt-4o-mini'
 
-const SYSTEM_PROMPT = `You are the AI assistant for Harsha Vardhini's portfolio website. Use the facts below about her to answer questions conversationally but concisely (2-4 sentences, plain text, no markdown). If asked something you don't know, say so and suggest checking her contact details.
+const SYSTEM_PROMPT = `You are the assistant for this portfolio website (currently a blank theme template). You will be given the owner's details when content is added. For now, be helpful and concise (2-4 sentences, plain text, no markdown). If asked about the owner's projects or experience, say the portfolio is still a theme framework and content has not been added yet.`
 
-Profile:
-- Name: ${meta.name}, a junior Data Analyst (${meta.role}).
-- Location: ${meta.location}. Email: ${meta.email}. Phone: ${meta.phone}. GitHub: ${meta.github}.
-- Skills groups: ${skillGroups.map((g) => `${g.label}: ${g.skills.join(', ')}`).join(' | ')}.
-- Experience: ${experience.map((e) => `${e.role} at ${e.company} (${e.period}), ${e.place}. Key highlights: ${e.highlight}`).join(' | ')}.
-- Featured projects: ${projects.map((p) => `${p.title} (${p.category}, ${p.year}) - ${p.desc}`).join(' | ')}.
-- Education: ${education.map((e) => `${e.degree}, ${e.school} (${e.period}) - ${e.note}`).join(' | ')}.
-- Certifications: ${certifications.map((c) => `${c.title} (${c.issuer}, ${c.date})`).join(' | ')}.`
-
-const SUGGESTIONS = ['What projects have you worked on?', 'What are your key skills?', 'Tell me about your experience', 'How can I contact you?']
+const SUGGESTIONS = ['Tell me about this site', 'Is this a real portfolio?', 'What tools is this built with?']
 
 export default function ChatWidget() {
   const { loaded } = useApp()
@@ -54,7 +44,7 @@ export default function ChatWidget() {
 
     const reply = async () => {
       if (!API_KEY) {
-        return 'Hi! I\'m wired up and ready, but the OpenAI API key isn\'t set yet. Add VITE_OPENAI_API_KEY to your .env file and I\'ll start answering questions about Harsha.'
+        return 'Hi! I\'m wired up and ready, but the OpenAI API key isn\'t set yet. Add VITE_OPENAI_API_KEY to your .env file and I\'ll start answering questions.'
       }
       const res = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -103,7 +93,7 @@ export default function ChatWidget() {
               </span>
               <div>
                 <p className="text-xs font-medium text-paper">AI Assistant</p>
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-mist">Answers about {meta.firstName}</p>
+                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-mist">Portfolio helper</p>
               </div>
             </div>
             <button
@@ -121,7 +111,7 @@ export default function ChatWidget() {
             {messages.length === 0 && !typing && (
               <div className="text-left">
                 <p className="inline-block max-w-[85%] rounded-sm border border-line bg-ink-2 px-4 py-3 text-sm font-light leading-relaxed text-paper">
-                  Hi! I'm Harsha's AI assistant. Ask me about her skills, projects, experience or how to reach her.
+                  Hi! I'm the portfolio assistant. This site is a theme framework for now — ask me anything, or try one of the suggestions below.
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {SUGGESTIONS.map((s) => (
@@ -175,7 +165,7 @@ export default function ChatWidget() {
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about Harsha…"
+              placeholder="Type a message…"
               aria-label="Message the assistant"
               className="flex-1 bg-transparent text-sm font-light text-paper placeholder:text-mist focus:outline-none"
             />

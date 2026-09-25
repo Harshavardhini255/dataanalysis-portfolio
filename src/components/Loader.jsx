@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { useApp } from '../lib/useApp'
 import { reducedMotion } from '../lib/motion'
-import { meta } from '../data/content'
 
 export default function Loader() {
   const rootRef = useRef(null)
@@ -45,14 +44,14 @@ export default function Loader() {
     return () => ctx.revert()
   }, [setLoaded])
 
-  const letters = meta.monogram.split('')
+  const letters = 'PORTFOLIO'.split('')
 
   return (
     <div ref={rootRef} className="fixed inset-0 z-[120] bg-ink" aria-hidden="true">
       <div className="flex h-full flex-col justify-between p-6 sm:p-10">
         <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-mist">
           <span>© 2026 Portfolio</span>
-          <span>Harsha Vardhini — Data Analyst</span>
+          <span>Your Name — Your Role</span>
         </div>
 
         <div className="flex flex-col items-start gap-8">

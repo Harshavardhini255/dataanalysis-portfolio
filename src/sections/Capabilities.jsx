@@ -1,15 +1,10 @@
 import { capabilities } from '../data/content'
-import { Kicker } from '../components/primitives'
-import { RevealWords } from '../components/reveal'
+import SectionHeader from '../components/SectionHeader'
 
 export default function Capabilities() {
   return (
     <section id="capabilities" className="px-6 py-28 sm:px-10 sm:py-40">
-      <Kicker>02 — What I Do</Kicker>
-      <RevealWords
-        text="Capabilities"
-        className="mt-4 font-display text-5xl font-bold uppercase tracking-tight sm:text-7xl"
-      />
+      <SectionHeader index="02" label="What I Do" title="Capabilities" />
 
       <div className="mt-16 border-b border-line">
         {capabilities.map((c) => (

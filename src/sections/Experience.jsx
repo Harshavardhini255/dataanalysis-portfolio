@@ -1,6 +1,6 @@
 import { experience } from '../data/content'
-import { Kicker } from '../components/primitives'
-import { RevealGroup, RevealWords } from '../components/reveal'
+import { RevealGroup } from '../components/reveal'
+import SectionHeader from '../components/SectionHeader'
 
 export default function Experience() {
   return (
@@ -8,11 +8,7 @@ export default function Experience() {
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <div className="sticky top-28">
-            <Kicker>04 — Experience</Kicker>
-            <RevealWords
-              text="Internships"
-              className="mt-4 font-display text-5xl font-bold uppercase tracking-tight sm:text-6xl"
-            />
+            <SectionHeader index="04" label="Experience" title="Résumé" />
           </div>
         </div>
 
